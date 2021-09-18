@@ -29,6 +29,7 @@ nav {
 footer {
     background-color: rgba(24, 21, 21, 0.9);
     color: rgb(243, 235, 235);
+    text-align: right;
 }
 .titulo-principal {
     text-align: center;
@@ -37,10 +38,12 @@ footer {
 }
 p {
     font-size:x-large;
+    margin-left: 100px;
 }
 img {
     border: 5px;
     border-style: solid;
+    margin-left: 100px;
 }
 .animate-scale {
     transition: all .2s linear;
@@ -71,6 +74,7 @@ img {
         transform: scale(1)
     }
 }
+/** ANIMAÇÕES WEBKIT */
 @-webkit-keyframes whiteToBlack {
     from {
         border-color: white;
@@ -78,4 +82,114 @@ img {
     to {
         border-color: black;
     }
+}
+@-webkit-keyframes scaleDiv {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+@media(min-width: 800px) {
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+    /** MENU */
+    .menu-item {
+        height: 10px;
+        padding: 10px;
+        display:inline;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .menu-link {
+        color: black;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+    /** Menu quando passa o mouse em cima */
+    .menu-link:hover {
+        color: white;
+        background-color:teal;
+    }
+    nav {
+        height: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: aliceblue;
+    }
+    footer {
+        background-color: rgba(24, 21, 21, 0.9);
+        color: rgb(243, 235, 235);
+        text-align: right;
+    }
+    .titulo-principal {
+        text-align: center;
+        font-weight: 500;
+        color: teal;
+    }
+    p {
+        font-size:x-large;
+        margin-left: 100px;
+    }
+    img {
+        border: 5px;
+        border-style: solid;
+        margin-left: 100px;
+    }
+    .animate-scale {
+        transition: all .2s linear;
+        animation: scaleDiv 1s;
+    }
+    
+    .animate-whiteToBlack {
+        transition: all 1s linear;
+        animation: whiteToBlack 1s;
+    }
+    /** ANIMAÇÕES */
+    @keyframes whiteToBlack {
+        from {
+            border-color: white;
+        }
+        to {
+            border-color: black;
+        }
+    }
+    @keyframes scaleDiv {
+        0% {
+            transform: scale(1)
+        }
+        50% {
+            transform: scale(1.5)
+        }
+        100% {
+            transform: scale(1)
+        }
+    }
+    /** ANIMAÇÕES WEBKIT */
+    @-webkit-keyframes whiteToBlack {
+        from {
+            border-color: white;
+        }
+        to {
+            border-color: black;
+        }
+    }
+    @-webkit-keyframes scaleDiv {
+        0% {
+            transform: scale(1)
+        }
+        50% {
+            transform: scale(1.5)
+        }
+        100% {
+            transform: scale(1)
+        }
+    }
+
 }
