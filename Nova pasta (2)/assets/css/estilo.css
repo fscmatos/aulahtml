@@ -1,0 +1,81 @@
+/** isto é um comentário */
+body {
+    margin: 0;
+    height: 100vh;
+}
+/** MENU */
+.menu-item {
+    height: 10px;
+    padding: 10px;
+    display:inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menu-link {
+    color: black;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+/** Menu quando passa o mouse em cima */
+.menu-link:hover {
+    color: white;
+    background-color:teal;
+}
+nav {
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color: aliceblue;
+}
+footer {
+    background-color: rgba(24, 21, 21, 0.9);
+    color: rgb(243, 235, 235);
+}
+.titulo-principal {
+    text-align: center;
+    font-weight: 500;
+    color: teal;
+}
+p {
+    font-size:x-large;
+}
+img {
+    border: 5px;
+    border-style: solid;
+}
+.animate-scale {
+    transition: all .2s linear;
+    animation: scaleDiv 1s;
+}
+
+.animate-whiteToBlack {
+    transition: all 1s linear;
+    animation: whiteToBlack 1s;
+}
+/** ANIMAÇÕES */
+@keyframes whiteToBlack {
+    from {
+        border-color: white;
+    }
+    to {
+        border-color: black;
+    }
+}
+@keyframes scaleDiv {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes whiteToBlack {
+    from {
+        border-color: white;
+    }
+    to {
+        border-color: black;
+    }
+}
